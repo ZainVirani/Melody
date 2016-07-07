@@ -12,9 +12,11 @@
 		18BB29FE1D2EDF4300B9E594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BB29FC1D2EDF4300B9E594 /* Main.storyboard */; };
 		18BB2A001D2EDF4300B9E594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BB29FF1D2EDF4300B9E594 /* Assets.xcassets */; };
 		18BB2A031D2EDF4300B9E594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BB2A011D2EDF4300B9E594 /* LaunchScreen.storyboard */; };
+		CC385C70A050AC7B14D9AA61 /* Pods_Melody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AA3B137055463A833EDE4D /* Pods_Melody.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15AF6652AD242DF884318B74 /* Pods-Melody.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Melody.release.xcconfig"; path = "Pods/Target Support Files/Pods-Melody/Pods-Melody.release.xcconfig"; sourceTree = "<group>"; };
 		18BB29F51D2EDF4300B9E594 /* Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Melody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BB29F81D2EDF4300B9E594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BB29FA1D2EDF4300B9E594 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		18BB29FF1D2EDF4300B9E594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18BB2A021D2EDF4300B9E594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18BB2A041D2EDF4300B9E594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80AA3B137055463A833EDE4D /* Pods_Melody.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Melody.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81FB337A5DEBFE83A876D815 /* Pods-Melody.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Melody.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Melody/Pods-Melody.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC385C70A050AC7B14D9AA61 /* Pods_Melody.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B2D2F8EF060FFB0A411001 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81FB337A5DEBFE83A876D815 /* Pods-Melody.debug.xcconfig */,
+				15AF6652AD242DF884318B74 /* Pods-Melody.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		18BB29EC1D2EDF4300B9E594 = {
 			isa = PBXGroup;
 			children = (
 				18BB29F71D2EDF4300B9E594 /* Melody */,
 				18BB29F61D2EDF4300B9E594 /* Products */,
+				05B2D2F8EF060FFB0A411001 /* Pods */,
+				FDAF5C590895F71E2EAAFAA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = Melody;
 			sourceTree = "<group>";
 		};
+		FDAF5C590895F71E2EAAFAA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80AA3B137055463A833EDE4D /* Pods_Melody.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BB2A071D2EDF4300B9E594 /* Build configuration list for PBXNativeTarget "Melody" */;
 			buildPhases = (
+				DE1CE5931198B084EA86730D /* [CP] Check Pods Manifest.lock */,
 				18BB29F11D2EDF4300B9E594 /* Sources */,
 				18BB29F21D2EDF4300B9E594 /* Frameworks */,
 				18BB29F31D2EDF4300B9E594 /* Resources */,
+				CEFFB9D0FF660A70BFDCAB14 /* [CP] Embed Pods Frameworks */,
+				36C7C9A75C179AE736EF3012 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36C7C9A75C179AE736EF3012 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Melody/Pods-Melody-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEFFB9D0FF660A70BFDCAB14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Melody/Pods-Melody-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1CE5931198B084EA86730D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18BB29F11D2EDF4300B9E594 /* Sources */ = {
@@ -249,6 +324,7 @@
 		};
 		18BB2A081D2EDF4300B9E594 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81FB337A5DEBFE83A876D815 /* Pods-Melody.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Melody/Info.plist;
@@ -260,6 +336,7 @@
 		};
 		18BB2A091D2EDF4300B9E594 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15AF6652AD242DF884318B74 /* Pods-Melody.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Melody/Info.plist;
@@ -288,6 +365,7 @@
 				18BB2A091D2EDF4300B9E594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
