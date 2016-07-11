@@ -7,7 +7,7 @@ target ‘Melody’ do
 
   pod ‘Parse’
   pod ‘ParseUI’
-
+  pod ‘ABMSoundCloudAPI’
  
 
 end

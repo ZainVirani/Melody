@@ -1,0 +1,6 @@
+framework module ABMSoundCloudAPI {
+  umbrella header "ABMSoundCloudAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

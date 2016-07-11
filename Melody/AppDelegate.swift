@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ABMSoundCloudAPI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // Set up the Parse SDK
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "melody-parse"
+            $0.server = "https://melody-parse.herokuapp.com/parse"
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
+        
+        
+        /*
+        do {
+            try PFUser.logInWithUsername("test", password: "test")
+        } catch {
+            print("Unable to log in")
+        }
+        
+        if let currentUser = PFUser.currentUser() {
+            print("\(currentUser.username!) logged in successfully")
+        } else {
+            print("No logged in user :(")
+        }
+        
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+         */
+        
+        /*Soundcloud login
+        client ID: 7beea6ee8685365f7869704aabfc533d
+        client Secret: b2de82015e6a5902dcb4bbfbe0b993b6
+        return_URL: https://Melody
+         
+         - (void) setClientID:(NSString *)clientID secretKey:(NSString *)secretKey {
+         self.soundCloudPort = [[SoundCloudPort alloc] initWithClientId:clientID clientSecret:secretKey];
+         }
+
+        */
+        
         return true
+
     }
 
     func applicationWillResignActive(application: UIApplication) {

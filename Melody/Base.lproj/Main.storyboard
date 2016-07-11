@@ -1,8 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="heU-Cs-UpG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="I8c-MJ-ho9">
+            <objects>
+                <navigationController id="heU-Cs-UpG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kg7-xk-t1M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="a23-qY-HUh" kind="relationship" relationship="rootViewController" id="zNf-vv-4ll"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1w-7z-d9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2832" y="152"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="XnG-QT-3RV">
+            <objects>
+                <viewController restorationIdentifier="initialVC" storyboardIdentifier="initialVC" title="Main" id="a23-qY-HUh" customClass="MainViewController" customModule="Melody" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lep-dV-Qnn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y93-I9-7nW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IJU-Z0-Mcd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Melody" id="y1F-Lv-ufp">
+                        <barButtonItem key="leftBarButtonItem" title="Edit Profile" id="6Ec-9z-b3v">
+                            <connections>
+                                <segue destination="ueJ-cd-PN8" kind="show" id="X5k-EV-PX2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKa-gP-Kxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2141" y="152"/>
+        </scene>
+        <!--Edit Profile VC-->
+        <scene sceneID="pOV-u1-SAW">
+            <objects>
+                <viewController title="Edit Profile VC" id="ueJ-cd-PN8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hh7-es-2qM"/>
+                        <viewControllerLayoutGuide type="bottom" id="niE-bt-vma"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wlN-G6-RTp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="iws-7t-ekG">
+                        <barButtonItem key="leftBarButtonItem" title="Save" id="C6P-uf-c13"/>
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="BPA-3V-hKu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bzj-ec-zxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2141" y="-514"/>
+        </scene>
+    </scenes>
 </document>
